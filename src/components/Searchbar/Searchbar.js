@@ -35,6 +35,7 @@ class Searchbar extends Component {
         <header className="searchbar">
           <form onSubmit={this.handleSubmit}>
             <button type="submit" className="button">
+              <span className="button-label">Search </span>
               <ImSearch />
             </button>
             <input

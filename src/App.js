@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Searchbar from './components/Searchbar';
+import ImageInfo from './components/ImageInfo';
 
 import './App.css';
 
@@ -11,6 +12,7 @@ class App extends Component {
   // componentDidMount() {}
 
   handleFormSubmit = imageName => {
+    console.log(imageName);
     this.setState({ imageName });
   };
 
@@ -18,6 +20,7 @@ class App extends Component {
     return (
       <>
         <Searchbar onSubmit={this.handleFormSubmit} />
+        <ImageInfo imageName={this.state.imageName} />
       </>
     );
   }
