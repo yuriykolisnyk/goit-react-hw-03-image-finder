@@ -20,7 +20,7 @@ class Searchbar extends Component {
     e.preventDefault();
 
     if (this.state.imageName.trim() === '') {
-      toast.error(`Please enter search query`);
+      toast.error(`Please enter your search term`);
       return;
     }
 
@@ -31,14 +31,15 @@ class Searchbar extends Component {
   render() {
     return (
       <>
-        <Toaster />
-        <header className="searchbar">
-          <form onSubmit={this.handleSubmit}>
-            <button type="submit" className="button">
-              {/* <span className="button-label">Search </span> */}
+        <Toaster position="top-right" reverseOrder={false} />
+        <header className="Searchbar">
+          <form className="SearchForm" onSubmit={this.handleSubmit}>
+            <button type="submit" className="SearchForm-button">
+              {/* <span className="SearchForm-button-label">Search </span> */}
               <ImSearch />
             </button>
             <input
+              className="SearchForm-input"
               type="text"
               name="name"
               value={this.state.imageName}

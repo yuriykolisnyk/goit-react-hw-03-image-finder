@@ -57,7 +57,7 @@ class ImageInfo extends Component {
     const { status } = this.state;
 
     if (status === 'idle') {
-      return <p>Please enter your search term</p>;
+      return <p className="SearchForm-message">Please enter your search term</p>;
     }
 
     if (status === 'pending') {
@@ -65,7 +65,7 @@ class ImageInfo extends Component {
     }
 
     if (status === 'rejected') {
-      return <p>Sorry, something went wrong</p>;
+      return <p className="SearchForm-message">Sorry, something went wrong</p>;
     }
 
     if (status === 'resolved') {

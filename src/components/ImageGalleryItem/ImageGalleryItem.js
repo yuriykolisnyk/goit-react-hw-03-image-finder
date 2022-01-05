@@ -25,7 +25,7 @@ class ImageGalleryItem extends Component {
 
     return (
       <li className="ImageGalleryItem">
-        <img onClick={this.toggleModal} src={src} alt={alt} className="ImageGalleryItemImage" />
+        <img onClick={this.toggleModal} src={src} alt={alt} className="ImageGalleryItem-image" />
         {showModal && <Modal onClose={this.toggleModal} src={largeImageUrl} alt={alt} />}
       </li>
     );
