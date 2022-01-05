@@ -9,10 +9,9 @@ class App extends Component {
     imageName: '',
   };
 
-  // componentDidMount() {}
+  componentDidMount() {}
 
   handleFormSubmit = imageName => {
-    console.log(imageName);
     this.setState({ imageName });
   };
 
